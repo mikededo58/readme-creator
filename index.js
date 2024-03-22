@@ -36,7 +36,13 @@ const questions = [
     type: "list",
     message: "What License would you like to add?",
     name: "license",
-    choices: ["MIT", "Github", "Test", "Testing"],
+    choices: ["MIT", "Mozilla", "GUN GPLv3", "The Unlicesnse"],
+  },
+  {
+    type: "list",
+    message: "What color would you like the badge for your license to be?",
+    name: "color",
+    choices: ["Blue", "Green", "Yellow", "Red"],
   },
   {
     type: "input",
@@ -47,6 +53,11 @@ const questions = [
     type: "input",
     name: "email",
     message: "What is an email people can reach you at?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "What tests did you run",
   },
 ];
 

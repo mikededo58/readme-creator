@@ -1,29 +1,35 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-// ![Static Badge](https://img.shields.io/badge/:"mit-blue, github-yellow")
-// create if function to iterate through color tyoes for licencse
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+//
+
+function renderLicenseLink(data) {
+  if ((data.license = "MIT")) {
+    return "https://choosealicense.com/licenses/mit/";
+  } else if ((data.license = "Mozilla")) {
+    return "https://choosealicense.com/licenses/mpl-2.0/";
+  } else if ((data.license = "GUN GPLv3")) {
+    return "https://choosealicense.com/licenses/gpl-3.0/)";
+  } else {
+    return "https://choosealicense.com/licenses/unlicense/";
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// https: function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // after description ## table of contents refernce markdown thing.
-  return `# Title 
-  ${data.project_title}
+  return `# ${data.project_title} 
+  ![Static Badge](https://img.shields.io/badge/${data.license}-${data.color})
   ## Table of Contents
-  1.[Despcription](README.md#Description)
-  2.[Installation](README.md#Installation)
-  3.[Usage](README.md#Usage)
-  4.[License](README.md#License)
-  5.[Contributions](README.md#Contributions)
-  6.[Questions](README.md#Questions)
-  7.[Tests](README.md#Test)
+  1. [Despcription](#description)
+  2. [Installation](#installation)
+  3. [Usage](#usage)
+  4. [License](#license)
+  5. [Contributions](#contributions)
+  6. [Questions](#questions)
+  7. [Tests](#test)
 ## Description 
 ${data.description}
 ## Installation
@@ -31,13 +37,15 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${data.license}
+${renderLicenseLink(data.license)}
 ## Contributions
 ${data.contribution}
 ## Questions
-Find my Github at ${data.github}. Feel free to reach me at ${data.email} to discuss any questions you may have!
+Find my Github at ${data.github}. Feel free to reach me at ${
+    data.email
+  } to discuss any questions you may have!
 ##Tests
-${data.test}
+${data.tests}
 `;
 }
 
