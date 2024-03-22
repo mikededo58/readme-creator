@@ -40,7 +40,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "gitthub",
+    name: "github",
     message: "What is your github URL?",
   },
   {
