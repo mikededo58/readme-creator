@@ -1,9 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { error } = require("console");
 const generateMarkdown = require("./utils/generateMarkdown");
-const { type } = require("os");
+
 // TODO: Create an array of questions for user input
 // for every question create a object
 const questions = [
@@ -36,7 +35,7 @@ const questions = [
     type: "list",
     message: "What License would you like to add?",
     name: "license",
-    choices: ["MIT", "Mozilla", "GUN GPLv3", "The Unlicesnse"],
+    choices: ["mit", "mpl-2.0", "gpl-3.0", "unlicense"],
   },
   {
     type: "list",
