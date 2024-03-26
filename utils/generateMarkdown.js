@@ -1,28 +1,7 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-//
 
-// function renderLicenseLink(data) {
-//   if ((data.license = "MIT")) {
-//     return "https://choosealicense.com/licenses/mit/";
-//   } else if ((data.license = "Mozilla")) {
-//     return "https://choosealicense.com/licenses/mpl-2.0/";
-//   } else if ((data.license = "GUN GPLv3")) {
-//     return "https://choosealicense.com/licenses/gpl-3.0/)";
-//   } else {
-//     return "https://choosealicense.com/licenses/unlicense/";
-//   }
-// }
-// // if the question is not empty then return out the with the license
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// https: function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data) {  //Creating a function to render all the prompted questions
   return `# ${data.project_title} 
-  ![Static Badge](https://img.shields.io/badge/${data.license}-${data.color})
+  ![Static Badge](https://img.shields.io/badge/${data.license}-${data.color}) 
   ## Table of Contents
   1. [Despcription](#description)
   2. [Installation](#installation)
