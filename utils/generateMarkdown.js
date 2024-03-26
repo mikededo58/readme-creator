@@ -42,8 +42,8 @@ https://choosealicense.com/licenses/${data.license}/
 ## Contributions
 ${data.contribution}
 ## Questions
-Find my Github at ${data.github}. Feel free to reach me at ${data.email} to discuss any questions you may have!
-##Tests
+Find my Github at https://github.com/${data.github}. Feel free to reach me at ${data.email} to discuss any questions you may have!
+## Tests
 ${data.tests}
 `;
 }
